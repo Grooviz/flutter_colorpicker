@@ -159,7 +159,7 @@ class _ColorPickerState extends State<ColorPicker> {
               Row(
                 children: <Widget>[
                   SizedBox(width: 20.0),
-                  ColorIndicator(currentHsvColor),
+                  ColorIndicator(HSVColor.fromColor(Colors.yellow)),
                   Column(
                     children: <Widget>[
                       // SizedBox(
