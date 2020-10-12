@@ -85,7 +85,8 @@ class _ColorPickerState extends State<ColorPicker> {
 
   @override
   Widget build(BuildContext context) {
-    if (MediaQuery.of(context).orientation == Orientation.portrait || widget.portraitOnly) {
+    if (MediaQuery.of(context).orientation == Orientation.portrait ||
+        widget.portraitOnly) {
       return Column(
         children: <Widget>[
           SizedBox(
@@ -138,6 +139,23 @@ class _ColorPickerState extends State<ColorPicker> {
               child: colorPickerArea(),
             ),
           ),
+          RotatedBox(
+            quarterTurns: 1,
+            child: SizedBox(
+              height: 40.0,
+              width: 260.0,
+              child: colorPickerSlider(TrackType.hue),
+            ),
+          ),
+          if (widget.enableAlpha)
+            RotatedBox(
+              quarterTurns: 1,
+              child: SizedBox(
+                height: 40.0,
+                width: 260.0,
+                child: colorPickerSlider(TrackType.alpha),
+              ),
+            ),
           Column(
             children: <Widget>[
               Row(
@@ -146,17 +164,17 @@ class _ColorPickerState extends State<ColorPicker> {
                   ColorIndicator(currentHsvColor),
                   Column(
                     children: <Widget>[
-                      SizedBox(
-                        height: 40.0,
-                        width: 260.0,
-                        child: colorPickerSlider(TrackType.hue),
-                      ),
-                      if (widget.enableAlpha)
-                        SizedBox(
-                          height: 40.0,
-                          width: 260.0,
-                          child: colorPickerSlider(TrackType.alpha),
-                        ),
+                      // SizedBox(
+                      //   height: 40.0,
+                      //   width: 260.0,
+                      //   child: colorPickerSlider(TrackType.hue),
+                      // ),
+                      // if (widget.enableAlpha)
+                      //   SizedBox(
+                      //     height: 40.0,
+                      //     width: 260.0,
+                      //     child: colorPickerSlider(TrackType.alpha),
+                      //   ),
                     ],
                   ),
                   SizedBox(width: 10.0),
