@@ -85,6 +85,7 @@ class _ColorPickerState extends State<ColorPicker> {
 
   @override
   Widget build(BuildContext context) {
+    print('Building Color Picker...');
     if (MediaQuery.of(context).orientation == Orientation.portrait ||
         widget.portraitOnly) {
       return Column(
