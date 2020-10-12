@@ -89,6 +89,7 @@ class _ColorPickerState extends State<ColorPicker> {
         widget.portraitOnly) {
       return Column(
         children: <Widget>[
+          Text('HAHAHA'),
           SizedBox(
             width: widget.colorPickerWidth,
             height: widget.colorPickerWidth * widget.pickerAreaHeightPercent,
@@ -132,6 +133,7 @@ class _ColorPickerState extends State<ColorPicker> {
     } else {
       return Row(
         children: <Widget>[
+          Text('HEHEHE'),
           SizedBox(
             width: widget.colorPickerWidth,
             height: widget.colorPickerWidth,
