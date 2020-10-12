@@ -132,12 +132,10 @@ class _ColorPickerState extends State<ColorPicker> {
     } else {
       return Row(
         children: <Widget>[
-          Expanded(
-            child: SizedBox(
-              width: 300.0,
-              height: 200.0,
-              child: colorPickerArea(),
-            ),
+          SizedBox(
+            width: widget.colorPickerWidth,
+            height: widget.colorPickerWidth,
+            child: colorPickerArea(),
           ),
           RotatedBox(
             quarterTurns: 1,
